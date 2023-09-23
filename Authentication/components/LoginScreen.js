@@ -16,6 +16,9 @@ const LoginScreen = ({navigation}) => {
     console.log('Username:', username);
     console.log('Password:', password);
   };
+  const handlePunch=()=>{
+    navigation.navigate("PunchScreen");
+  }
 
   return (
     <View style={styles.inputContainer}>
@@ -35,6 +38,9 @@ const LoginScreen = ({navigation}) => {
       />
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={handlePunch}>
+        <Text style={styles.buttonText}>PunchButton</Text>
       </TouchableOpacity>
     </View>
   );
@@ -67,6 +73,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     padding: 10,
     borderRadius: 5,
+    marginTop:9
   },
   buttonText: {
     color: 'white',

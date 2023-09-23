@@ -2,8 +2,8 @@ import { StyleSheet, Text, View } from "react-native";
 import LoginScreen from "./components/LoginScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./components/HomeScreen";
 import MapComponent from "./components/MapComponent";
+import PunchButtonComp from "./components/PunchButtonComp";
 
 
 export default function App() {
@@ -16,8 +16,8 @@ export default function App() {
       <NavigationContainer style={styles.container}>
         <Stack.Navigator initialRouteName="LoginScreen">
           <Stack.Screen name="Login" component={LoginScreen} />
-          {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
-          <Stack.Screen name="Map" component={MapComponent} />
+          <Stack.Screen name="HomeScreen" component={MapComponent} />
+          <Stack.Screen name="PunchScreen" component={PunchButtonComp} />
         </Stack.Navigator>
       </NavigationContainer>
   );
